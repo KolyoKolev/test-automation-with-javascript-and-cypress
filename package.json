@@ -1,0 +1,29 @@
+{
+  "name": "test-automation-with-javascript-and-cypress",
+  "version": "1.0.0",
+  "description": "cypress e2e automation project",
+  "main": "index.js",
+  "scripts": {
+    "cy:run": "cypress run",
+    "cy:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KolyoKolev/test-automation-with-javascript-and-cypress.git"
+  },
+  "keywords": [
+    "cypress",
+    "e2e",
+    "automation"
+  ],
+  "author": "Kolyo Kolev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KolyoKolev/test-automation-with-javascript-and-cypress/issues"
+  },
+  "homepage": "https://github.com/KolyoKolev/test-automation-with-javascript-and-cypress#readme",
+  "dependencies": {
+    "cypress": "^6.4.0",
+    "eslint": "^7.19.0"
+  }
+}
