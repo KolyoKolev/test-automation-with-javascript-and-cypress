@@ -11,3 +11,8 @@ export const ATTRIBUTES_TEST_PAGE = {
   PARAGRAPH_WITH_DYNAMIC_ATTRIBUTES: '#jsattributes',
   BUTTON: 'button.styled-click-button',
 };
+
+export const TABLE_TEST_PAGE = {
+  TABLE_SECTION: '#mytable',
+  TABLE_ROW: 'tr',
+};
