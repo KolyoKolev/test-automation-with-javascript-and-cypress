@@ -6,3 +6,8 @@ export const BASIC_TEST_PAGE = {
   EXPLANATION_SECTION: '.explanation',
   FOOTER: '.page-footer',
 };
+
+export const ATTRIBUTES_TEST_PAGE = {
+  PARAGRAPH_WITH_DYNAMIC_ATTRIBUTES: '#jsattributes',
+  BUTTON: 'button.styled-click-button',
+};
