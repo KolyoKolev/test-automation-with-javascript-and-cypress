@@ -16,3 +16,11 @@ export const TABLE_TEST_PAGE = {
   TABLE_SECTION: '#mytable',
   TABLE_ROW: 'tr',
 };
+
+export const BASIC_JAVASCRIPT_VALIDATION_TEST_PAGE = {
+  INPUT_FIELD: '#lteq30',
+  INPUT_SUBMIT: 'input.styled-click-button',
+};
+export const THE_FORM_PROCESSOR_TEST_PAGE = {
+  SUBMITTED_VALUE_FIELD: '#_valuevalue',
+};
