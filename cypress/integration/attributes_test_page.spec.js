@@ -1,10 +1,11 @@
 import formatUrl from '../utils/formatUrl';
 import pathnames from '../constants/pathnames';
+import { HTML } from '../constants';
 import * as selectors from '../selectors';
 
 describe('Attributes test page', () => {
   before('load the attributes test page', () => {
-    cy.visit(formatUrl(pathnames.attributesPage));
+    cy.visit(formatUrl(pathnames.attributesPage, HTML));
   });
 
   it('should assert adding of a dynamic attribute by clicking on a button', () => {

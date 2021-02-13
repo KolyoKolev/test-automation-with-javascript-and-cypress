@@ -1,10 +1,11 @@
 import formatUrl from '../utils/formatUrl';
 import pathnames from '../constants/pathnames';
+import { HTML } from '../constants';
 import * as selectors from '../selectors';
 
 describe('Basic test page', () => {
   before('load the basic test page', () => {
-    cy.visit(formatUrl(pathnames.basicWebPage));
+    cy.visit(formatUrl(pathnames.basicWebPage, HTML));
   });
 
   it("should assert the H1 text value using selectors' abstraction", () => {
@@ -46,10 +47,10 @@ describe('Basic test page', () => {
     cy.get(selectors.BASIC_TEST_PAGE.NAVIGATION_INDEX_LINK)
       .click()
       .url()
-      .should('include', formatUrl(pathnames.indexPage))
+      .should('include', formatUrl(pathnames.indexPage, HTML))
       .go('back')
       .url()
-      .should('include', formatUrl(pathnames.basicWebPage));
+      .should('include', formatUrl(pathnames.basicWebPage, HTML));
   });
 
   it('should assert for redirects in the footer', () => {

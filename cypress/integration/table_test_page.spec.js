@@ -1,10 +1,11 @@
 import formatUrl from '../utils/formatUrl';
 import pathnames from '../constants/pathnames';
+import { HTML } from '../constants';
 import * as selectors from '../selectors';
 
 describe('Table test page', () => {
   before('load the table test page', () => {
-    cy.visit(formatUrl(pathnames.tablePage));
+    cy.visit(formatUrl(pathnames.tablePage, HTML));
   });
 
   it('should assert the first column heading value', () => {
