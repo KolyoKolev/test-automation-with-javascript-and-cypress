@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/KolyoKolev/test-automation-with-javascript-and-cypress#readme",
   "dependencies": {
-    "cypress": "^6.4.0",
-    "eslint": "^7.19.0"
+    "cypress": "^7.3.0",
+    "eslint": "^7.26.0"
   }
 }
