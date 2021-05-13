@@ -27,6 +27,7 @@
     "eslint": "^7.26.0"
   },
   "devDependencies": {
-    "cypress-file-upload": "^5.0.7"
+    "cypress-file-upload": "^5.0.7",
+    "cypress-grep": "^2.1.1"
   }
 }
