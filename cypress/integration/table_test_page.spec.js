@@ -24,13 +24,17 @@ describe('Table test page', () => {
       );
   });
 
-  it('should assert the first column first item value', () => {
-    cy.get(selectors.TABLE_TEST_PAGE.TABLE_ROW)
-      .eq(1)
-      .within(() =>
-        cy.get('td').first().invoke('text').should('equal', 'Alan')
-      );
-  });
+  it(
+    'should assert the first column first item value',
+    { tags: '@smoke' },
+    () => {
+      cy.get(selectors.TABLE_TEST_PAGE.TABLE_ROW)
+        .eq(1)
+        .within(() =>
+          cy.get('td').first().invoke('text').should('equal', 'Alan')
+        );
+    }
+  );
 
   it('should assert the second column first item value', () => {
     cy.get(selectors.TABLE_TEST_PAGE.TABLE_ROW)

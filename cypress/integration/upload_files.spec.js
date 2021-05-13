@@ -10,7 +10,7 @@ describe('Upload files', () => {
     cy.visit(baseURL);
   });
 
-  it('should upload a single file', () => {
+  it('should upload a single file', { tags: '@smoke' }, () => {
     cy.get(fileUploadInput)
       .attachFile(fileOnePath)
       .get(uploadButton)
