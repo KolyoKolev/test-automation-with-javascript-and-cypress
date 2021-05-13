@@ -34,4 +34,17 @@ describe('Upload files', () => {
       // some issue with app here
       .should('eq', 'Internal Server Error');
   });
+
+  it('should drag and drop multiple files', () => {
+    cy.get(dragAndDrop)
+      .attachFile([fileOnePath, fileTwoPath], {
+        subjectType: 'drag-n-drop',
+      })
+      .get(uploadButton)
+      .click()
+      .get('h1')
+      .invoke('text')
+      // some issue with app here
+      .should('eq', 'Internal Server Error');
+  });
 });
