@@ -3,6 +3,7 @@ const fileTwoPath = 'docs/fileTwo.txt';
 const baseURL = 'https://the-internet.herokuapp.com/upload';
 const fileUploadInput = '#file-upload';
 const uploadButton = '#file-submit';
+const dragAndDrop = '#drag-drop-upload';
 
 describe('Upload files', () => {
   beforeEach('should load a test page', () => {
@@ -19,5 +20,18 @@ describe('Upload files', () => {
       .get('#uploaded-files')
       .invoke('text')
       .should('include', 'fileOne.txt');
+  });
+
+  it('should drag and drop a file', () => {
+    cy.get(dragAndDrop)
+      .attachFile(fileOnePath, {
+        subjectType: 'drag-n-drop',
+      })
+      .get(uploadButton)
+      .click()
+      .get('h1')
+      .invoke('text')
+      // some issue with app here
+      .should('eq', 'Internal Server Error');
   });
 });
