@@ -23,12 +23,10 @@
     "url": "https://github.com/KolyoKolev/test-automation-with-javascript-and-cypress/issues"
   },
   "homepage": "https://github.com/KolyoKolev/test-automation-with-javascript-and-cypress#readme",
-  "dependencies": {
-    "cypress": "^7.3.0",
-    "eslint": "^7.26.0"
-  },
   "devDependencies": {
-    "cypress-file-upload": "^5.0.7",
-    "cypress-grep": "^2.1.1"
+    "cypress": "^7.6.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-grep": "^2.5.2",
+    "eslint": "^7.30.0"
   }
 }
