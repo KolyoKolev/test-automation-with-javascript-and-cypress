@@ -1,7 +1,3 @@
-import formatUrl from '../utils/formatUrl';
-import pathnames from '../constants/pathnames';
-import * as selectors from '../selectors';
-
 describe.skip('Spec template', () => {
   before('do something at the beginning of the whole suit', () => {
     cy.visit('particular url');
