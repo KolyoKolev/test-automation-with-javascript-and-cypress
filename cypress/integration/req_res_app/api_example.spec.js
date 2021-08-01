@@ -1,10 +1,10 @@
-import { REQ_RES_APP } from '../constants/index';
+import { REQ_RES_APP } from '../../constants';
 
 describe('reqres api', () => {
   it('should verify the creation of new user', () => {
     cy.request({
       method: 'POST',
-      url: `${REQ_RES_APP.BASE_URL}/users`,
+      url: `${REQ_RES_APP.BASE_URL}${REQ_RES_APP.PATHNAMES.USERS}`,
       body: {
         id: 7,
         email: 'test@reqres.in',
@@ -22,7 +22,7 @@ describe('reqres api', () => {
   });
 
   it('should verify the content-type header', () => {
-    cy.request(`${REQ_RES_APP.BASE_URL}/users`)
+    cy.request(`${REQ_RES_APP.BASE_URL}${REQ_RES_APP.PATHNAMES.USERS}`)
       .its('headers')
       .its('content-type')
       .should('include', 'application/json');
