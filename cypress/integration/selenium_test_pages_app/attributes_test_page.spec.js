@@ -18,15 +18,13 @@ describe('Attributes test page', () => {
       selectors.SELENIUM_TEST_PAGES_APP.ATTRIBUTES_TEST_PAGE
         .PARAGRAPH_WITH_DYNAMIC_ATTRIBUTES
     )
+      .as('paragraphWithDynamicAttributes')
       .should('have.attr', 'nextid', 1)
       .and('not.have.attr', 'custom-1', 'value-1')
       .and('not.have.attr', 'nextid', 2)
       .get(selectors.SELENIUM_TEST_PAGES_APP.ATTRIBUTES_TEST_PAGE.BUTTON)
       .click()
-      .get(
-        selectors.SELENIUM_TEST_PAGES_APP.ATTRIBUTES_TEST_PAGE
-          .PARAGRAPH_WITH_DYNAMIC_ATTRIBUTES
-      )
+      .get('@paragraphWithDynamicAttributes')
       .should('have.attr', 'nextid', 2)
       .and('have.attr', 'custom-1', 'value-1');
   });
