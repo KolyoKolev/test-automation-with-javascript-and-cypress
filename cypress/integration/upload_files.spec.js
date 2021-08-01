@@ -1,19 +1,21 @@
-const fileOnePath = 'docs/fileOne.txt';
-const fileTwoPath = 'docs/fileTwo.txt';
-const baseURL = 'https://the-internet.herokuapp.com/upload';
-const fileUploadInput = '#file-upload';
-const uploadButton = '#file-submit';
-const dragAndDrop = '#drag-drop-upload';
+import {
+  THE_INTERNET_APP,
+  PATH_TO_FILE_ONE,
+  PATH_TO_FILE_TWO,
+} from '../constants';
+import * as selectors from '../selectors';
 
 describe('Upload files', () => {
   beforeEach('should load a test page', () => {
-    cy.visit(baseURL);
+    cy.visit(
+      `${THE_INTERNET_APP.BASE_URL}${THE_INTERNET_APP.PATHNAMES.UPLOAD}`
+    );
   });
 
   it('should upload a single file', { tags: '@smoke' }, () => {
-    cy.get(fileUploadInput)
-      .attachFile(fileOnePath)
-      .get(uploadButton)
+    cy.get(selectors.THE_INTERNET_APP.FILE_UPLOAD)
+      .attachFile(PATH_TO_FILE_ONE)
+      .get(selectors.THE_INTERNET_APP.UPLOAD_BTN)
       .click()
       .get('h3')
       .should('have.text', 'File Uploaded!')
@@ -23,11 +25,11 @@ describe('Upload files', () => {
   });
 
   it('should drag and drop a file', () => {
-    cy.get(dragAndDrop)
-      .attachFile(fileOnePath, {
+    cy.get(selectors.THE_INTERNET_APP.DRAG_AND_DROP)
+      .attachFile(PATH_TO_FILE_ONE, {
         subjectType: 'drag-n-drop',
       })
-      .get(uploadButton)
+      .get(selectors.THE_INTERNET_APP.UPLOAD_BTN)
       .click()
       .get('h1')
       .invoke('text')
@@ -36,11 +38,11 @@ describe('Upload files', () => {
   });
 
   it('should drag and drop multiple files', () => {
-    cy.get(dragAndDrop)
-      .attachFile([fileOnePath, fileTwoPath], {
+    cy.get(selectors.THE_INTERNET_APP.DRAG_AND_DROP)
+      .attachFile([PATH_TO_FILE_ONE, PATH_TO_FILE_TWO], {
         subjectType: 'drag-n-drop',
       })
-      .get(uploadButton)
+      .get(selectors.THE_INTERNET_APP.UPLOAD_BTN)
       .click()
       .get('h1')
       .invoke('text')
