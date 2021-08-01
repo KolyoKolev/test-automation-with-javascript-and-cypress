@@ -2,8 +2,8 @@ import {
   THE_INTERNET_APP,
   PATH_TO_FILE_ONE,
   PATH_TO_FILE_TWO,
-} from '../constants';
-import * as selectors from '../selectors';
+} from '../../constants';
+import * as selectors from '../../selectors';
 
 describe('Upload files', () => {
   beforeEach('should load a test page', () => {
