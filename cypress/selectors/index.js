@@ -30,3 +30,8 @@ export const THE_INTERNET_APP = {
   DRAG_AND_DROP: '#drag-drop-upload',
   UPLOADED_FILES: '#uploaded-files',
 };
+
+export const W3SCHOOL_APP = {
+  ACCEPT_TERMS_AND_CONDITIONS: '#accept-choices',
+  IFRAME: '#iframeResult',
+};
