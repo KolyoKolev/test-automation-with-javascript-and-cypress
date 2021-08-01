@@ -24,4 +24,7 @@ export const THE_INTERNET_APP = {
 
 export const REQ_RES_APP = {
   BASE_URL: 'https://reqres.in/api',
+  PATHNAMES: {
+    USERS: '/users',
+  },
 };
