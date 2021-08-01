@@ -19,7 +19,7 @@ describe('Upload files', () => {
       .click()
       .get('h3')
       .should('have.text', 'File Uploaded!')
-      .get('#uploaded-files')
+      .get(selectors.THE_INTERNET_APP.UPLOADED_FILES)
       .invoke('text')
       .should('include', 'fileOne.txt');
   });
