@@ -28,3 +28,10 @@ export const REQ_RES_APP = {
     USERS: '/users',
   },
 };
+
+export const W3SCHOOL_APP = {
+  BASE_URL: 'https://www.w3schools.com',
+  PATHNAMES: {
+    IFRAME: '/tags/tryit.asp?filename=tryhtml_iframe',
+  },
+};
