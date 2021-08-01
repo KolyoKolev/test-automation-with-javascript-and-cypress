@@ -28,4 +28,5 @@ export const THE_INTERNET_APP = {
   FILE_UPLOAD: '#file-upload',
   UPLOAD_BTN: '#file-submit',
   DRAG_AND_DROP: '#drag-drop-upload',
+  UPLOADED_FILES: '#uploaded-files',
 };
