@@ -1,4 +1,4 @@
-# E2E Test Automation Project With JavaScript and Cypress
+# E2E Test Automation Project With Cypress
 
 ## Summary
 
