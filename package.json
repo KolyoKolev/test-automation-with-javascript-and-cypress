@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/KolyoKolev/test-automation-with-javascript-and-cypress#readme",
   "devDependencies": {
-    "cypress": "^8.1.0",
+    "cypress": "^8.3.1",
     "cypress-file-upload": "^5.0.8",
     "cypress-grep": "^2.5.3",
     "eslint": "^7.32.0"
