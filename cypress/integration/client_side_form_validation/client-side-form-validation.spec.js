@@ -69,4 +69,26 @@ describe('Client side form validation', () => {
         valid: false,
       });
   });
+
+  it('should deep check the validity of the first input when text is typed in the field', () => {
+    cy.get(SELECTORS.inputField1)
+      .as('input')
+      .type('test')
+      .get(SELECTORS.submitBtn)
+      .click()
+      .get(SELECTORS.inputField1)
+      .invoke('prop', 'validity')
+      .should('deep.include', {
+        badInput: false,
+        customError: false,
+        patternMismatch: false,
+        rangeOverflow: false,
+        rangeUnderflow: false,
+        stepMismatch: false,
+        tooLong: false,
+        tooShort: false,
+        typeMismatch: false,
+        valid: true,
+      });
+  });
 });
