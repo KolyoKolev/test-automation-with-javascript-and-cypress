@@ -17,4 +17,10 @@ describe('Client side form validation', () => {
   it('should check the number of invalid inputs on initial load', () => {
     cy.get('input:invalid').should('have.length', 3);
   });
+
+  it('should check the validity of the first input field when empty', () => {
+    cy.get('input:invalid')
+      .then((inputs) => inputs[0].checkValidity())
+      .should('be.false');
+  });
 });
