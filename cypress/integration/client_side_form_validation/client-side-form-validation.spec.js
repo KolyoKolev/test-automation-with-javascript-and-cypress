@@ -10,7 +10,7 @@ const SELECTORS = {
 };
 
 describe('Client side form validation', () => {
-  before('load form test page', () => {
+  beforeEach('load form test page', () => {
     cy.visit(FORM_TEST_PAGE);
   });
 
@@ -22,5 +22,12 @@ describe('Client side form validation', () => {
     cy.get('input:invalid')
       .then((inputs) => inputs[0].checkValidity())
       .should('be.false');
+  });
+
+  it('should check the validity of the first input field when text is typed in it', () => {
+    cy.get(SELECTORS.inputField1)
+      .type('test')
+      .then((inputs) => inputs[0].checkValidity())
+      .should('be.true');
   });
 });
