@@ -30,4 +30,11 @@ describe('Client side form validation', () => {
       .then((inputs) => inputs[0].checkValidity())
       .should('be.true');
   });
+
+  it('should check the validation error message of the first input', () => {
+    cy.get(SELECTORS.submitBtn).click();
+    cy.get(SELECTORS.inputField1)
+      .invoke('prop', 'validationMessage')
+      .should('eq', 'Test field 1 should not be left empty');
+  });
 });
